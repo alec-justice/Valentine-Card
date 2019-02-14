@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0%;
+    background-color: lightpink;
+    border: 20px dotted red;
+    padding: 0%;
+    margin-right: 0%;
+}
+
+
+.header {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+
+}
+
+img {
+    width: 50%;
+    height: 40%;
+    align-items: center;
+}
+
+.button {
+}
+
+
+/* pulsing heart */
+
+#wrapper {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation:pulse 1s infinite;
+    padding-top: 3%;
+}
+
+
+#pulsingheart { 
+  position: relative; 
+  width: 100px; 
+  height: 90px;
+  
+} 
+
+#pulsingheart:before, #pulsingheart:after { 
+  position: absolute; 
+  content: ""; 
+  left: 50px; 
+  top: 0; 
+  width: 50px; 
+  height: 80px; 
+  background: #aa0000; 
+  border-radius: 50px 50px 0 0; 
+  transform: rotate(-45deg);  
+  transform-origin: 0 100%;
+  animation:pulsecolor 1s infinite;
+} 
+
+#pulsingheart:after { 
+  left: 0; 
+  transform: rotate(45deg); 
+  transform-origin :100% 100%;
+  animation:pulsecolor 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}
+
+@keyframes pulsecolor {
+  10% {background: #dd0000}
+}
